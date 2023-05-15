@@ -13,11 +13,11 @@ class enemigo {
     }
 }
 
-const slime = new enemigo("Slime", 10, 1);
-const esqueleto = new enemigo("Esqueleto", 20, 2);
-const dragon = new enemigo("Dragon", 50, 3);
-
-console.log(slime.hp)
+const enemigosBasicos= [
+    new enemigo("Slime", 5, 1),
+    new enemigo("Esqueleto", 10, 2),
+    new enemigo("Dragon", 20, 3),
+];
 
 // Historia en alertas
 
@@ -50,9 +50,11 @@ alert("Cuidado " + nombrePj + " Ahi viene un Slime...")
 
 // Funcion de batalla la cual repetiremos a lo largo del codigo
 
-function batalla() {
-
+function batalla(enemigosBasicos) {
+    slime = enemigosBasicos.find(enemigo => enemigo.nombre === "Slime"); // Busca si existe el slime en los enemigos
+    slime.hp = slime.hp; 
     batallaSlime = prompt("Ahi viene un slime, ¿deseas atacar o defender?"); // pregunta de ataque o defensa ejecuta en base al switch
+
     while (batallaSlime === "") {
         alert("Eso no es una accion"); // Ejecuta esta alerta siempre y cuando no se seleccione atacar o defender
     }
@@ -76,6 +78,8 @@ function batalla() {
                     break;
         }
         
+        // Si la vida del Slime llega a 0 se gana la batalla
+
         if(slime.hp === 0){
             alert("Excelente " + nombrePj +" Te curare la vida para que puedas continuar con tu camino, por favor derrota al dragon");
             terminoBatalla = true;
@@ -90,7 +94,7 @@ function batalla() {
 }
 
 
-batalla();
+batalla(enemigosBasicos);
 
 
 
