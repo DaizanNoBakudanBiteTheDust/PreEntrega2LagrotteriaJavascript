@@ -20,7 +20,7 @@ const enemigosBasicos= [
 ];
 
 // Historia en alertas
-
+function historia(){
 alert("Bienvenido al RPG de Texto, en este viaje usaremos la imaginacion para tratar de meternos en un mundo plagado de monstruos, lo ideal seria que nos conocieramos mejor antes de continuar..");
 
 // Selecciona el nombre
@@ -46,7 +46,7 @@ while (nombrePj === "") {
 
 alert("Excelente " + nombrePj + " mi nombre es Kaine no se si te haz enterado pero aqui han pasado muchas cosas, un Dragon ha estado atacando esta aldea y necesitamos de un valiente guerrero para que nos ayude a derrotarlo, actualmente no contamos con nadie que sepa utilzar un arma, pero veo que tu cargas una, quizas puedas ayudarnos derrotando unos slimes que se encuentran en el pueblo");
 
-alert("Cuidado " + nombrePj + " Ahi viene un Slime...")
+alert("Cuidado " + nombrePj + " Ahi viene un Slime...");
 
 // Funcion de batalla la cual repetiremos a lo largo del codigo
 
@@ -96,9 +96,6 @@ function batalla(enemigosBasicos) {
 
 batalla(enemigosBasicos);
 
+}
 
-
-
-// Atacar
-
-// Recibir daño git
+historia()
