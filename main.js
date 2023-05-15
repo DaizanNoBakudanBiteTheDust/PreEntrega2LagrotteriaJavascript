@@ -13,6 +13,8 @@ class enemigo {
     }
 }
 
+// Array objeto constructor de enemigos en base a array
+
 const enemigosBasicos = [
     new enemigo("Slime", 5, 1),
     new enemigo("Esqueleto", 10, 2),
@@ -104,9 +106,9 @@ function historia() {
 
     // Esta funcion entrega un enemigo Aleatorio PD: solo para usar math y darle mas dinamismo a este juego por ahora
 
-    let enemigoRandom; // dejo variable abierta
+    let enemigoRandom; // dejo variable que llamo abajo abierta para que se mantengan valores en la funcion venidera
 
-    function batallaAleatoria(enemigosBasicos) {
+    function batallaAleatoria(enemigosBasicos) {  // este codigo lo puedo llamar cuantas veces quiera y va a entregar valores distintos
         personaje.hp = 100;
         enemigoRandom = enemigosBasicos[Math.floor(Math.random() * enemigosBasicos.length)]; // Busca un enemigo del array de enemigos
         enemigoRandom.nombre = enemigoRandom.nombre; // Llama al nombre enemigo
