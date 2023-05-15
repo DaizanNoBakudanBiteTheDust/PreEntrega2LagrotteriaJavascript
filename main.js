@@ -85,7 +85,7 @@ function historia() {
                 alert("Excelente " + nombrePj + " Te curare la vida para que puedas continuar con tu camino, por favor derrota al dragon");
                 terminoBatalla = true;
                 personaje.ataque = personaje.ataque + 1;
-                personaje.hp === personaje.hp + 5;
+
                 slime.hp = + 5;
                 break;
             } else {
@@ -107,6 +107,7 @@ function historia() {
     let enemigoRandom; // dejo variable abierta
 
     function batallaAleatoria(enemigosBasicos) {
+        personaje.hp = 100;
         enemigoRandom = enemigosBasicos[Math.floor(Math.random() * enemigosBasicos.length)]; // Busca un enemigo del array de enemigos
         enemigoRandom.nombre = enemigoRandom.nombre; // Llama al nombre enemigo
         enemigoRandom.hp = enemigoRandom.hp; // Llama al Hp del enemigo
